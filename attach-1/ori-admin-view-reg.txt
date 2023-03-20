@@ -1,0 +1,1001 @@
+
+<?php session_start(); ?>
+
+
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>KOHINOOR TECH COMPUTER ACADEMY</title>
+    <meta name="description" content="Sufee Admin - HTML5 Admin Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     
+    <link rel="apple-touch-icon" href="images/favicon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">   
+    <link rel="stylesheet" href="vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="vendors/selectFX/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="vendors/jqvmap/dist/jqvmap.min.css">
+
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+<style>
+
+.p99 {
+  display: inline-block;
+  height: 512px;
+  overflow: auto
+}
+     
+
+
+
+.navbar .navbar-nav li > a {
+padding:10px 30px;
+}
+.navbar .navbar-nav li > a:hover, .navbar .navbar-nav li > a:active, .navbar-nav li > a:focus {
+background-color:black !important;
+}
+.navbar .navbar-nav li.menu-item-has-children a:before{
+
+    right: 8px;
+}
+aside.left-panel{
+overflow: scroll;
+    position: fixed;
+	width:270px;
+}
+.right-panel {
+margin-left: 268px;
+display:block;
+}
+.text-light
+{
+text-align:center;
+font-weight:bold;
+}
+.dataTables_filter label
+{
+margin-right:50px;
+margin-left:320px;
+}
+
+
+.dataTables_length
+{
+    margin-left:30px;
+}
+.dataTables_info
+{
+     margin-left:50px;
+}
+
+@media only screen and (max-width: 600px) {
+.navbar .navbar-nav li > a {
+padding:10px 30px;
+}
+.navbar .navbar-nav li > a:hover, .navbar .navbar-nav li > a:active, .navbar-nav li > a:focus {
+background-color:black !important;
+}
+.navbar .navbar-nav li.menu-item-has-children a:before{
+
+    right: 8px;
+}
+aside.left-panel{
+overflow: scroll;
+    position: fixed;
+	width:270px;
+}
+.right-panel {
+margin-left: 300px;
+display:block;
+}
+}
+</style>
+
+</head>
+
+<body>
+
+
+    <!-- Left Panel -->
+
+  <aside id="left-panel" class="left-panel">
+        <nav class="navbar navbar-expand-sm navbar-default">
+
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="./"><img src="images/ui-sam.png" alt="Logo"></a>
+								<p><font color="#FFFFFF">KOHINOOR TECH COMPUTER ACADEMY</font></p>
+                <a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo"></a>
+            </div>
+
+            <div id="main-menu" class="main-menu collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    
+                    <li> <h3 class="menu-title"><font color="white"><center>K-ADMIN</font></h3></center><!-- /.menu-title --></li>
+                     <li class="active">
+                        <a href="dashboard.php"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
+                    </li>
+                    
+                   
+                    
+                    
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Admission </a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><a href="registration.php">Add Admission</a></li>
+							 <li><a href="view-reg.php">Admission Manager</a></li>
+                            							
+                        </ul>
+                    </li>
+                    
+                    
+                     <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Student Certificate </a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><a href="marks2.php">Add Certificate</a></li>
+                            <li><a href="view-marks2.php">Certificate Manager</a></li>
+							
+														 
+														 
+														 
+                        </ul>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Student Admit Card</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><a href="reg-course.php">Add Admit Card</a></li>
+                            <li><a href="view-course2.php"> Admit Card Manager</a></li>
+														
+                        </ul>
+                    </li>
+                    
+                    
+                     <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Online Exam</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><a href="add-exam.php">Add Examination</a></li>
+                            <li><a href="final-exam.php">Examination Manager</a></li>
+														 <!--<li><i class="fa fa-circle"></i><a href="forms-advanced.html">Authorisation Certificate</a></li>-->
+                        </ul>
+                    </li>
+                    
+                    
+                    
+                     <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Question</a>
+                        <ul class="sub-menu children dropdown-menu">
+						 <li><a href="#">Add Question</a></li>
+                           
+                           
+							
+                        </ul>
+                    </li>
+                    
+                    
+                     <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Online Admission </a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><a href="admission-form.php">New Admission</a></li>
+                            <li><a href="view1.php">Admission Manager</a></li>
+                        </ul>
+                    </li>
+                    
+                    
+                     <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Online Job</a>
+                        <ul class="sub-menu children dropdown-menu">
+                           
+							 <li><a href="view-job1.php">Add Job Online Form</a></li>
+                            <li><a href="view-job.php">Online Job Manager</a></li>
+														
+                        </ul>
+                    </li>
+                    
+                    
+                     <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Job Admit Card</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><a href="reg-admit.php">Add Admit Card</a></li>
+                            <li><a href="view-job2.php"> Admit Card Manager</a></li>
+														
+                        </ul>
+                    </li>
+                    
+                    
+                    
+                     <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Job Result </a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><a href="job-entry.php">Add Mark</a></li>
+                            <li><a href="view-job-entry.php">Mark Entry Manager</a></li>
+							
+														 
+														 
+														 
+                        </ul>
+                    </li>
+                    
+                    
+                     <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Online Job Exam</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><a href="">Add Examination</a></li>
+                            <li><a href=""> Examination Manager</a></li>
+														
+                        </ul>
+                    </li>
+                    
+                    
+                     <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Online Scholorship </a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><a href="scholorshipform.php">Add Scholorship Online</a></li>
+														 <li><a href="view-scholor.php"> Scholorship Manager</a></li>
+                        </ul>
+                    </li>
+                    
+                     <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Scholorship Admit Card</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><a href="reg-scholor.php">Add Admit Card</a></li>
+                            <li><a href="view-scholor2.php"> Admit Card Manager</a></li>
+														
+                        </ul>
+                    </li>
+                    
+                    
+                    
+                     <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Scholorship Result </a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><a href="scholor-entry.php">Add Mark</a></li>
+                            <li><a href="view-scholor-entry.php">Mark Entry Manager</a></li>
+							
+														 
+														 
+														 
+                        </ul>
+                    </li>
+                    
+                    
+                     <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Online Scholorship Exam</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><a href="">Add Examination</a></li>
+                            <li><a href=""> Examination Manager</a></li>
+														
+                        </ul>
+                    </li>
+                    
+                    
+                     <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Placement</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><a href="form-placement.php">Add Placement</a></li>
+                            <li><a href="view-placement.php"> Placement Manager</a></li>
+														
+                        </ul>
+                    </li>
+                    
+                    
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Franchise Enquiry</a>
+                        <ul class="sub-menu children dropdown-menu">
+                           
+														
+														 
+														 <li><a href="fran-enq.php">Franchise Enquiry Manager</a></li>
+														 
+														 
+														
+                        </ul>
+                    </li>
+                    
+                    
+                    
+                     <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Franchise</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><a href="add-fran.php">Add Franchise</a></li>
+                            <li><a href="tables-data.php">Franchise Manager</a></li>
+														
+														 
+														 
+														 
+														 
+														 <li><a href="#">Pending</a></li>
+                        </ul>
+                    </li>
+                    
+                    
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Franchise Certificate </a>
+                        <ul class="sub-menu children dropdown-menu">
+                            
+														  <li><a href="add-fran1.php">Add Certificate/Renewal</a></li>
+														   <!--<li><a href="add-fran2.php">Add Renewal</a></li>-->
+														   <li><a href="fran-renewal.php">Franchise Certificate Manager</a></li>
+														   <!--<li><a href="fran-renewal1.php">Franchise Renewal Manager</a></li>-->
+							
+														 
+														 
+														 
+                        </ul>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Employee Joining </a>
+                        <ul class="sub-menu children dropdown-menu">
+                            
+														  <li><a href="emp-form.php">Add Employee</a></li>
+														   <li><a href="view-emp.php">Employee Manager</a></li>
+														  
+							
+														 
+														 
+														 
+                        </ul>
+                    </li>
+                    
+                    
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> State Controller </a>
+                        <ul class="sub-menu children dropdown-menu">
+                            
+														  <li><a href="form-state.php">Add Controller</a></li>
+														   <li><a href="view-state.php">Controller Manager</a></li>
+														   
+							
+														 
+														 
+														 
+                        </ul>
+                    </li>
+                    
+                    
+                     <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> District Controller </a>
+                        <ul class="sub-menu children dropdown-menu">
+                            
+														  <li><a href="form-dist.php">Add Controller</a></li>
+														   <li><a href="view-dist.php">Controller Manager</a></li>
+														   
+							
+														 
+														 
+														 
+                        </ul>
+                    </li>
+                    
+                    
+                     <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Branch Employee </a>
+                        <ul class="sub-menu children dropdown-menu">
+                            
+														  <li><a href="form-emp1.php">Add Employee</a></li>
+														   <li><a href="view-emp1.php">Employee Manager</a></li>
+														   
+							
+														 
+														 
+														 
+                        </ul>
+                    </li>
+                    
+                    
+                     <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Branch Authorisation </a>
+                        <ul class="sub-menu children dropdown-menu">
+                            
+														  <li><a href="form-auth.php">Add Authorisation</a></li>
+														   <li><a href="view-auth1.php">Authorisation Manager</a></li>
+														   
+							
+														 
+														 
+														 
+                        </ul>
+                    </li>
+					
+                    
+                  
+                    
+                    
+                   
+					
+					 
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					  
+					
+					
+					
+					
+					
+					  <!--<li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <b>Admission</b> </a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-circle"></i><a href="student-new-admission.php">Add Admission</a></li>
+                            <li><i class="fa fa-circle"></i><a href="view-add.php">Admission Manager</a></li>
+							
+														 
+														 
+														 
+                        </ul>
+                    </li>-->
+					
+					
+					
+					  
+					
+										
+										 <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">State Admin </a>
+                        <ul class="sub-menu children dropdown-menu">
+						 <li><a href="form-state2.php">Add Admin</a></li>
+                            <li><a href="view-state-admin.php">Admin Manager</a></li>
+                           
+							
+                        </ul>
+                    </li>
+										
+										 <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">District Admin </a>
+                        <ul class="sub-menu children dropdown-menu">
+						 <li><a href="form-dist2.php">Add Admin</a></li>
+                            <li><a href="view-dist-admin.php">Admin Manager</a></li>
+                           
+							
+                        </ul>
+                    </li>
+										
+										
+										
+										
+										
+										
+                   
+										
+										
+					
+										
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+										
+										
+										
+										 
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+										
+										
+
+                    <h3 class="menu-title">WEBSITE PANEL MANAGER</h3><!-- /.menu-title -->
+
+                     <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Our Website</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            
+                             <li><i class="menu-icon fa fa-th"></i><a href="add-job-post.php">Add Job Posting</a></li>
+														 <li><i class="menu-icon fa fa-th"></i><a href="view-job-vacancy.php">Job Post Manager</a></li>
+                            
+                            
+                            
+												      <li><i class="menu-icon fa fa-th"></i><a href="#">Query Manager</a></li>
+															 <li><i class="menu-icon fa fa-th"></i><a href="add-banner.php">Add Banner</a></li>
+                            <li><i class="menu-icon fa fa-th"></i><a href="banner.php">Banner Manager</a></li>
+														 <li><i class="menu-icon fa fa-th"></i><a href="form-news.php">Add News </a></li>
+                            <li><i class="menu-icon fa fa-th"></i><a href="view-news1.php">News Manager</a></li>
+														 <li><i class="menu-icon fa fa-th"></i><a href="#">Subject Manager</a></li>
+														 <li><i class="menu-icon fa fa-th"></i><a href="#">Add About</a></li>
+														 <li><i class="menu-icon fa fa-th"></i><a href="#">About Manager</a></li>
+														 <li><i class="menu-icon fa fa-th"></i><a href="#">Student Testimonial</a></li>
+														 <li><i class="menu-icon fa fa-th"></i><a href="#">Centre Testimonial Manager</a></li>
+														  <li><i class="menu-icon fa fa-th"></i><a href="#">Add Book Publication </a></li>
+														 <li><i class="menu-icon fa fa-th"></i><a href="view-pub1.php">Book Publication Manager</a></li>
+														  <li><i class="menu-icon fa fa-th"></i><a href="form-fran.php">Add Our Franchise</a></li>
+														 <li><i class="menu-icon fa fa-th"></i><a href="view-fran1.php">Our Franchise Manager</a></li>
+														  <li><i class="menu-icon fa fa-th"></i><a href="#">Add Our Upcoming Events</a></li>
+														  <li><i class="menu-icon fa fa-th"></i><a href="view-event1.php">Our Upcoming Events</a></li>
+														  <li><i class="menu-icon fa fa-th"></i><a href="#">Add Our Main Courses</a></li>
+														 <li><i class="menu-icon fa fa-th"></i><a href="view-course1.php">Our Main Courses</a></li>
+														 <li><i class="menu-icon fa fa-th"></i><a href="#">Our Gallery</a></li>
+														 <li><i class="menu-icon fa fa-th"></i><a href="#">Gallery Manager</a></li>
+                        </ul>
+                    </li>
+										
+										
+										
+                   
+                   
+
+                  
+                    
+                   
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </aside><!-- /#left-panel -->
+    <!-- Left Panel -->
+
+    <!-- Right Panel -->
+
+     <div id="right-panel" class="right-panel">
+
+        <!-- Header-->
+        <header id="header" class="header">
+
+            <div class="header-menu">
+
+                <div class="col-sm-7">
+                   
+                    <div class="header-left">
+                        <button class="search-trigger"><i class="fa fa-search"></i></button>
+                        
+
+                        
+
+                        
+                    </div>
+                </div>
+
+                <div class="col-sm-5">
+                    <div class="user-area dropdown float-right">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="user-avatar rounded-circle" src="images/admin.jpg" alt="User Avatar">
+                        </a>
+
+                        <div class="user-menu dropdown-menu">
+                            <a class="nav-link" href="#"><i class="fa fa-user"></i> My Profile</a>
+
+                            <a class="nav-link" href="#"><i class="fa fa-user"></i> Notifications <span class="count">13</span></a>
+
+                            <a class="nav-link" href="#"><i class="fa fa-cog"></i> Settings</a>
+
+                            <a class="nav-link" href="#"><i class="fa fa-power-off"></i> Logout</a>
+                        </div>
+                    </div>
+
+                    <div class="language-select dropdown" id="language-select">
+                        <a class="dropdown-toggle" href="#" data-toggle="dropdown"  id="language" aria-haspopup="true" aria-expanded="true">
+                            <i class="flag-icon flag-icon-us"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="language">
+                            <div class="dropdown-item">
+                                <span class="flag-icon flag-icon-fr"></span>
+                            </div>
+                            <div class="dropdown-item">
+                                <i class="flag-icon flag-icon-es"></i>
+                            </div>
+                            <div class="dropdown-item">
+                                <i class="flag-icon flag-icon-us"></i>
+                            </div>
+                            <div class="dropdown-item">
+                                <i class="flag-icon flag-icon-it"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </header><!-- /header -->
+        <!-- Header-->
+
+        <div class="breadcrumbs">
+            <div class="col-sm-4">
+                <div class="page-header float-left">
+                    <div class="page-title">
+                        <h1>Admission Manager</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="page-header float-right">
+                    <div class="page-title">
+                        <ol class="breadcrumb text-right">
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Table</a></li>
+                            <li><a href="view-fran.php"><input type="submit" name='submit' class="btn btn-primary " value="View All" style="height:30px; line-height:5px;"></a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+				
+				
+														
+														
+												
+														
+		<!------------------------------------------------single view franchise--------------------------------------------------------------->
+				
+    <?php 
+	 
+$conn = mysqli_connect("localhost","kohinoortech","q^R9.N(,EmM!","kohinoortech");
+if(mysqli_connect_error()){
+    die("Error");
+}
+  $id=$_SESSION['centre_code'];
+  
+  $query="select * from registration_form where centre_code='$id'";
+  $result=mysqli_query($conn, $query);
+  $row=mysqli_fetch_assoc($result);
+  
+ 
+?>
+				
+				
+				
+		<!------------------------------------------------close frnchise view single----------------------------------------------------------------->	
+														
+														
+														
+														
+						<div class="container">
+ 
+  <!-- Trigger the modal with a button -->
+ 
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+         
+          <h4 class="modal-title">Candidate Profile</h4>
+        </div>
+        
+        <div class="modal-body">
+            <div id="regdetail"></div>
+            
+        </div>
+														
+														
+														
+														
+														
+											
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+
+							<div class="searchform">
+        <form method="get" action="search.php">
+            <input type="hidden" name="faculty" value="arts">
+            <table>
+            <tr>
+                
+                                     <td>
+                                         <select name="gender" required="">
+                                <option value="">SELECT COURSE</option>
+                                 <option value="MALE">MALE</option>
+                                  <option value="FEMALE">FEMALE</option>
+                                  
+                                     </select>
+                                     </td>
+                                     <td>
+                                         <select name="urdu" required="">
+                                <option value="">SELECT URDU CANDIDATE</option>
+                                 <option value="yes">Yes</option>
+                                  <option value="no">No</option>
+                                  
+                                     </select>
+                                     </td>
+                                     <td>
+                                         <input type="submit" name="search" value="Search">
+                                     </td>
+            </tr>
+        </table>
+        </form>
+        
+    </div>
+														
+														
+														
+				<!---------------------------------------------------view code------------------------------------------------------------------------->
+		 
+										<form method="post" enctype="multipart/form-data">						
+                             
+                             
+                             	<div class="p99">
+                             
+                             
+                                <table  id="bootstrap-data-table-export" class="table table-striped table-bordered"  style="font-size:12px;">
+                                    <thead>
+                                        <tr>
+                                             <td align="center" style="background-color:#104277; color:#fff; width:100px;">SR NO.</td>
+                                             
+                                             
+																						<td align="center" style="background-color:#104277; color:#fff; width:150px;">REGISTRATION NO</td>
+																						 <td align="center" style="background-color:#104277; color:#fff; width:150px;">STUDENT NAME</td>
+																						  <td align="center" style="background-color:#104277; color:#fff; width:130px;">FATHERS NAME</td>
+																						  
+																						   <td align="center" style="background-color:#104277; color:#fff; width:130px;">MOTHERSS NAME</td>
+																						  
+																							 <td align="center" style="background-color:#104277; color:#fff; width:130px;">COURSE NAME</td>
+																							  <td align="center" style="background-color:#104277; color:#fff;">DURATION</td>
+                                                <td align="center" style="background-color:#104277; color:#fff; width:150px;">REGISTRATION DATE</td>
+                                                 <td align="center" style="background-color:#104277; color:#fff;">MOBILE NO</td>
+																								  <td align="center" style="background-color:#104277; color:#fff;">ACTION</td>
+																								  <!--<td style="background-color:#104277; color:#fff;">STATUS</td>-->
+																								  <td align="center" style="background-color:#104277; color:#fff;">VERIFY</td>
+																									 
+																									  
+																						
+																						
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+				<?php
+	
+$conn = mysqli_connect("localhost","kohinoortech","q^R9.N(,EmM!","kohinoortech");
+if(mysqli_connect_error()){
+    die("Error");
+}
+$query="select * from registration_form order by id DESC";
+  $result=mysqli_query($conn, $query);
+  $i=1;
+   $n = mysqli_num_rows($result);
+    echo "Total Record is :"; 
+		echo $n;
+ while($row=mysqli_fetch_array($result))
+{
+    
+    
+	
+	$centre_code=$row["centre_code"];
+	
+    $roll=$row["roll"];
+	 $registration=$row["registration"];
+	  $registration_date=$row["registration_date"];
+	 $student_name=$row["student_name"];
+	
+  $fathers_name=$row["fathers_name"];
+	$mothers_name=$row["mothers_name"];
+	$dob=$row["dob"];
+	$sex=$row["sex"];
+	$marital=$row["marital"];
+	$nation=$row["nation"];
+	$category=$row["category"];
+	$village=$row["village"];
+	$district=$row["district"];
+	$post=$row["post"];
+	$station=$row["station"];
+	
+	$state=$row["state"];
+	$pin=$row["pin"];
+	$contact=$row["contact"];
+	
+	
+	
+	$whats=$row["whats"];
+	 $email=$row["email"];
+	
+	$courselist=$row["courselist"];
+	$courseFullname=$row["courseFullname"];
+	
+	$duration=$row["duration"];
+	
+	$last=$row["last"];
+	$college=$row["college"];
+	$uni=$row["uni"];
+	$years=$row["years"];
+	$full_marks=$row["full_marks"];
+	$percentage=$row["percentage"];
+	$sub=$row["sub"];
+	$photo=$row["photo"];
+		$aadhar=$row["aadhar"];
+		
+	
+		$qua=$row["qua"];
+		$technical1=$row["technical1"];
+		$id=$row["id"];
+?>
+				
+				
+				<!-------------------------------------------------view close---------------------------------------------------------------------------->
+				
+
+       
+                           
+                          
+                                       <tr>
+                                            <td><?php echo $i; ?></td>
+                                            
+                                            
+																						<td><?php echo $row['registration']; ?></td>
+																						 <td><?php echo strtoupper ($row['student_name']); ?></td>
+																						  <td><?php echo strtoupper ($row['fathers_name']); ?></td>
+																						  
+																						    <td><?php echo strtoupper ($row['mothers_name']); ?></td>
+																							<td><?php echo $row['courselist']; ?></td>
+																							 <td><?php echo $row['duration']; ?></td>
+																						 <td><?php echo $row['registration_date']; ?></td>
+                                              <td><?php echo $row['contact']; ?></td>
+																							<td><i title="View" class="fa fa-eye viewreg" aria-hidden="true" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" data-reg-id="<?php echo $row["id"]; ?>"></i>&nbsp;&nbsp;<a href="edit-reg.php?edit=<?php echo $row["id"]; ?>"><i class="fa fa-pencil-square-o" title="Edit" aria-hidden="true" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"></i>
+																							
+	&nbsp;&nbsp;<a href="delete-reg.php?delete=<?php echo $row["id"]; ?>" onclick="return confirm('Are you sure you want to Delete?');"><i class="fa fa-trash" title="Delete" aria-hidden="true"></i></a> </td>
+																							<!--<td>
+																							    <?php
+																							    
+													/*	if($row["admin_verify"]== 0) {
+														echo "Inactive";
+														} else {
+														echo "Active";
+														} */									    ?>
+																							</td>-->
+																							<td>
+																							    
+																							    <?php
+																    if($row["admin_verify"] == 1) {
+																        ?>
+																        <a href="reg-verify-inactive.php?id=<?php echo $row["id"]; ?>" class="btn btn-sm btn-success">Active</a>
+																        <?php
+																    } else {
+																        ?>
+																        <a href="reg-verify.php?id=<?php echo $row["id"]; ?>" class="btn btn-sm btn-danger">In Active</a>
+																        <?php
+																        
+																        
+																        
+																    }
+																    ?>
+																							    
+																							</td>
+																							
+																															 
+																					 
+																					 
+<?php
+$i++;
+}
+
+?>
+																					 
+																					 
+                                        </tr>
+                                       
+                                    </tbody>
+                                </table>
+																</form>
+																
+																</div>
+                           
+            </div><!-- .animated -->
+       
+
+
+  
+
+    <!-- Right Panel -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <script src="vendors/popper.js/dist/umd/popper.min.js"></script>
+    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+    <script src="vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="vendors/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="vendors/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+    <script src="vendors/jszip/dist/jszip.min.js"></script>
+    <script src="vendors/pdfmake/build/pdfmake.min.js"></script>
+    <script src="vendors/pdfmake/build/vfs_fonts.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+    <script src="assets/js/init-scripts/data-table/datatables-init.js"></script>
+<script src="assets/js/reg.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="datatables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.flash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.print.min.js"></script>
+
+ <script>
+	$(document).ready(function() {
+    $('#example1').DataTable( {
+        "paging":   true,
+        "ordering": true,
+        "info":     true,
+        responsive: true,
+        dom: 'Bfrtip',
+        buttons: [
+            'csv', 'excel', 'print'
+        ],
+        
+    } );
+} );
+	</script>
+
+
+   
+    
+    <script>
+	$(document).ready(function() {
+    $('#example').DataTable( {
+        responsive: true,
+        dom: 'Bfrtip',
+        buttons: [
+            'csv', 'excel', 'print'
+        ],
+        
+    } );
+} );
+	</script>
+
+
+</body>
+
+</html>
